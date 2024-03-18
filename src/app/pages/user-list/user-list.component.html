@@ -1,0 +1,31 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <button class="page-link" (click)="previousPage()" [disabled]="currentPage === 1" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </button>
+      </li>
+      <li class="page-item"><a class="page-link" (click)="numberPage(1)">1</a></li>
+      <li class="page-item"><a class="page-link" (click)="numberPage(2)">2</a></li>
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage()"aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+<div class="row">
+    @for(usuario of arrUsuarios; track usuario.id){
+        <article class="col-12 col-md-3 col-md-3 ">
+            <app-user-card  [miUsuario]="usuario"></app-user-card>
+
+        </article>
+    }
+
+    <!-- <h2>Users Page {{ currentPage }}</h2>
+  <button class="btn btn-danger" (click)="previousPage()" [disabled]="currentPage === 1">                    <span aria-hidden="true">«</span>
+  </button>
+  <button class="btn btn-danger" (click)="nextPage()">Next Page</button> -->
+    
+</div>
+

@@ -1,0 +1,19 @@
+<section class="container mt-3">
+    <div class="  p-3">
+        <div class="row gap-5">
+            <figure class="col-12 col-md-3 col-lg-3">
+                <img class="img-fluid rounded-circle" [src]="unUser.image" alt="">
+            </figure>
+            <div class="vr p-0 "></div>
+            <div class="col-12 col-md-3 col-md-7 ">
+                <h2>{{unUser.first_name}}</h2>
+                <h2 class="mb-5">{{unUser.last_name}}</h2>
+                <h4 class="mt-2"><span>Nombre de Usuario:</span> {{unUser.username}}</h4>
+                <h4 class="mt-4 mb-5"><span>Email: </span>{{unUser.email}}</h4>
+                <app-botonera  [parent]="'view'" [idUsuario]="unUser._id"></app-botonera>
+
+            </div>
+        </div>
+        
+    </div>
+</section>

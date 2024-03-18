@@ -1,0 +1,40 @@
+<div class="row ">
+
+@if(parent === 'card'){
+    <div class="col-12 col-md-4">
+         <a [routerLink]="['/usuario', idUsuario]" class="btn link-underline-dark" >
+          <p><i class="fa-solid fa-magnifying-glass fa-xl"></i></p>
+          <p>Detalles</p></a>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <a [routerLink]="['/updateuser', idUsuario]"  class="btn link-dark" >
+          <p><i class="fa-solid fa-pen fa-2xl" ></i></p>
+          <p>Actualizar</p></a>
+    </div>
+
+    <div class="col-12 col-md-4">
+        <a class="btn link-dark" (click)="borrarUsuario(idUsuario)" >
+          <p><i class="fa-solid fa-trash fa-2xl" ></i></p>
+          <p>Borrar</p>
+          </a>
+      </div>
+
+}@else if (parent ===  'view') {
+
+    <div class="col-4 col-md-4 p-0">
+         <a class="btn btn-outline-dark " (click)="borrarUsuario(idUsuario)" >Eliminar</a>
+      </div>
+
+      <div class="col-4 col-md-4 p-0">
+        <a [routerLink]="['//updateuser', idUsuario]"  class="btn btn-outline-dark" >Actualizar</a>
+    </div>
+
+    <div class="col-4 col-md-4 p-0">
+        <a [routerLink]="['/usuarios']" class="btn btn-outline-dark" >Listado</a>
+      </div>
+}
+
+
+    
+</div>

@@ -1,0 +1,11 @@
+<div class="card mb-3 text-center">
+    <figure class="mt-3">
+        <img [src]="miUsuario.image" class="img-fluid rounded-circle txiki" [alt]="miUsuario.username">
+    </figure>
+    <div class="card-body ">
+        <h5 class="card-title mb-4">{{miUsuario.username}}</h5>
+        <app-botonera [parent]="'card'" [idUsuario]="miUsuario._id"></app-botonera>
+
+        
+    </div>
+</div>
